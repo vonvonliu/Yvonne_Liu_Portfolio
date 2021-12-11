@@ -4,10 +4,11 @@ const descriptions = ["A classic game of battleship played in the console writte
                 "NASA plans to land on the moon again in 2024, and we are taking a part in it! ",
                 "Several mini-projects written in HTML, JavaScript, and CSS."];
 const images = ["assets/ship.svg", "assets/isat.svg", "assets/glee.svg", "assets/web.svg"];
-const links = ["location.href='https://github.com/kevinawongw/CSCI4448-5448-Battleship-Team-ApplePair'",
-                "location.href='https://github.com/SeniorCapstoniSAT/pxt-microbit'",
-                "location.href='https://github.com/GLEE2023/GLEE2023'",
-                "location.href='https://github.com/vonvonliu/web-repo'"];
+const alts = ["ship", "clipart of website", "clipart of moon", "clipart of website"];
+const links = ["https://github.com/kevinawongw/CSCI4448-5448-Battleship-Team-ApplePair",
+                "https://github.com/SeniorCapstoniSAT/pxt-microbit",
+                "https://github.com/GLEE2023/GLEE2023",
+                "https://github.com/vonvonliu/web-repo"];
 document.getElementById("battleship").addEventListener("click", function(){ClickedChoice("battleship")});
 document.getElementById("capstone").addEventListener("click", function(){ClickedChoice("capstone")});
 document.getElementById("glee").addEventListener("click", function(){ClickedChoice("glee")});
@@ -31,6 +32,7 @@ function ClickedChoice(choice){
   }
   document.getElementById("proj").innerHTML = projs[i];
   document.getElementById("img").src = images[i];
-  document.getElementById("img").onclick = links[i];
+  document.getElementById("img").alt = alts[i];
+  document.getElementById("imglink").href = links[i];
   document.getElementById("description").innerHTML = descriptions[i];
 }

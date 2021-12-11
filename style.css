@@ -1,4 +1,19 @@
 /*All Pages*/
+@media screen and (min-width: 700px){
+  h1{
+    font-size: 50px;
+    font-family: "Playfair Display";
+    color: #937D55;
+  }
+}
+
+@media screen and (max-width: 700px){
+  h1{
+    font-size: 25px;
+    font-family: "Playfair Display";
+    color: #937D55;
+  }
+}
 body{
   align-items: center;
   text-align: center;
@@ -34,11 +49,6 @@ nav a:hover{
 .active{
   color: #195257;
   font-weight: 100px;
-}
-h1{
-  font-size: 50px;
-  font-family: "Playfair Display";
-  color: #937D55;
 }
 h2{
   font-size: 50px;
@@ -127,29 +137,23 @@ h6{
 }
 
 /*Experience Page*/
-.rotate90 {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
 #bulletin{
   z-index: 0;
-  position: absolute;
+  position: relative;
 
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .frame{
-  position: relative;
+  position: absolute;
   width: 800px;
   height: 800px;
   z-index: 10;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  left: 23%;
+  right: auto;
+  top: 40%;
   z-index: 0;
 }
 .note {
@@ -214,13 +218,13 @@ h6{
     -moz-transform: scale(1.1);
     transform: scale(1.1);
 }
-#websites{
+.websites{
   filter: drop-shadow(3px 3px 4px rgba(0,0,0,.5));
 }
-#websites:hover{
+.websites:hover{
   transform: translateY(-10px);
 }
-#desc{
+.desc{
   font-size: 20px;
   font-family: "Raleway";
   color: #195257;
